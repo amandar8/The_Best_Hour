@@ -23,6 +23,7 @@ PostGresSQL, Knex, Google Places API, Bootstrap
 User account creation, searchable happy hours by location
 
 #Mockups
+
 ![Main page mockup](https://github.com/amandar8/the_best_hour/blob/master/public/imgs/mockup1.jpg)
 
 ![Blog and Happy Hour mockups](https://github.com/amandar8/the_best_hour/blob/master/public/imgs/mockup2.jpg)
