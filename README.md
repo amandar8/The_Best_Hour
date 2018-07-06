@@ -1,5 +1,5 @@
-# the_best_hour
-My Q2 project containing Austin's Happy Hours
+# The Best Hour
+My Q2 project, The Best Hour, containing Austin's Happy Hours
 
 ## Group Members
 Amanda Rutherfoord
