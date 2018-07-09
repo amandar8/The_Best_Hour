@@ -16,9 +16,23 @@ h5{
 }
 
 .media{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 30px;
+    border: 1px solid black;
+    width: 630px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .media-body{
     padding: 20px;
+}
+
+.instagram-container{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
 }
