@@ -1,4 +1,12 @@
-(function() {
+
+// let google_api_key = AIzaSyBv0RbQRPesMRDxxK2MTcoqDzKkFRCFkMI
+// let yelp_api_key = Xr8WsuOc0iiO_plqSBqz7KioMwaEQE6JsCbrqfCvZeHzpfwPomnnOWkKQ0pmyj4AQYX_de86aT_p9qCXrcymmrcUCxUN9EXbM6J6idp1Q48ddd_-3BPgR9Aw1gxFW3Yx
+// let yelp_client_id = = Uv4QWQceI90GU8e7rJ-EAA
+
+
+// Initial map on open
+
+(function () {
 
   function initMap() {
     let currentLocation = {
@@ -6,14 +14,14 @@
       lng: -97.760
     }
     configureMap(currentLocation);
-
-
   }
-  /////////////////////////////////////////
+
+
+  //configuring current location
 
 
   function configureMap(currentLocation) {
-    map = new google.maps.Map(document.getElementById('foodMap'), {
+    map = new google.maps.Map(document.getElementById('map'), {
       center: currentLocation,
       zoom: 15,
       styles: [{
@@ -207,6 +215,8 @@
           }
         ]
     });
+
+    
     infoWindow = new google.maps.InfoWindow();
     service = new google.maps.places.PlacesService(map);
 
@@ -223,11 +233,11 @@
       map: map,
 
     });
-    marker.addListener('click', function() {
+    marker.addListener('click', function () {
       infowindow.open(map, marker);
     });
 
-    autocomplete.addListener('place_changed', function() {
+    autocomplete.addListener('place_changed', function () {
       infowindow.close();
       marker.setVisible(false);
       var place = autocomplete.getPlace();
@@ -290,28 +300,7 @@
 
     }
   }
-  ///////////////////////////////////////
-  function randomSearch(searchTerm) {
-    console.log(searchTerm);
-    let request = {
-      bounds: map.getBounds(),
-      keyword: searchTerm
-    };
 
-    service.radarSearch(request, randomSetMarkers);
-  }
-
-  function randomSetMarkers(results, status) {
-    if (status !== google.maps.places.PlacesServiceStatus.OK) {
-      window.alert("Please choose another item or new location!");
-      console.error(status);
-      return;
-    }
-    let randomItem = results[Math.floor(Math.random() * results.length)];
-    addMarker(randomItem);
-
-
-  }
   /////////////////////////////////////////////////////
 
   function addMarker(place) {
@@ -320,7 +309,7 @@
       animation: google.maps.Animation.DROP,
       position: place.geometry.location,
       icon: {
-        url: 'https://image.flaticon.com/icons/svg/37/37481.svg',
+        url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
         anchor: new google.maps.Point(30, 30),
         scaledSize: new google.maps.Size(25, 30)
       }
@@ -329,8 +318,8 @@
     myMarkers.push(marker);
 
 
-    google.maps.event.addListener(marker, 'click', function() {
-      service.getDetails(place, function(result, status) {
+    google.maps.event.addListener(marker, 'click', function () {
+      service.getDetails(place, function (result, status) {
         if (status !== google.maps.places.PlacesServiceStatus.OK) {
           console.error(status);
           return;
@@ -342,48 +331,6 @@
     });
   }
 
-  function configureRestaurantOpenNow() {
-    function removeMarkers() {
-      for (i = 0; i < myMarkers.length; i++) {
-        myMarkers[i].setMap(null)
-      }
-    }
-    let openNowButton = document.getElementById('open-button');
-    openNowButton.addEventListener('click', function() {
-      removeMarkers();
-      performSearch("Restaurants open in");
-    });
-  }
-
-  function configureRestaurantButton() {
-    function removeMarkers() {
-      for (i = 0; i < myMarkers.length; i++) {
-        myMarkers[i].setMap(null)
-      }
-    }
-    let foodButton = document.getElementById('food-button');
-    foodButton.addEventListener('click', function() {
-      removeMarkers();
-      let foodSelectElement = $('#foodType option:selected');
-      performSearch(foodSelectElement.text() + " " + "in");
-    });
-  }
-
-
-  function configureRandomRestaurant() {
-    function removeMarkers() {
-      for (i = 0; i < myMarkers.length; i++) {
-        myMarkers[i].setMap(null);
-      }
-    }
-    let randomButton = document.getElementById('random-button');
-    randomButton.addEventListener('click', function() {
-      removeMarkers();
-      let foodSelectElement = $('#foodType option:selected');
-      randomSearch(foodSelectElement.text() + " " + "in");
-    });
-  }
-
   function configureMealTime() {
     function removeMarkers() {
       for (i = 0; i < myMarkers.length; i++) {
@@ -391,7 +338,7 @@
       }
     }
     let mealButton = document.getElementById('rating-button');
-    mealButton.addEventListener('click', function() {
+    mealButton.addEventListener('click', function () {
       removeMarkers();
       let ratingSelectElement = $('#starType option:selected');
       performSearch(ratingSelectElement.text() + " " + "in");
@@ -402,8 +349,6 @@
 
 
   initMap();
-  configureRestaurantButton();
-  configureRandomRestaurant();
   configureMealTime();
-  configureRestaurantOpenNow();
+
 })();

@@ -12,7 +12,7 @@
     <link rel="icon" href="./imgs/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/happyhour.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
     <title>The Best Hour</title>
 </head>
@@ -45,37 +45,74 @@
         </div>
     </nav>
 
-    <main>
-        <div class="row justify-content-center margin-top-50">
-            <div class="col-10 border-bottom">
-                <section class="title-container">
-                    <h1>Find A Happy Hour!</h1>
-                </section>
+    <div class="row">
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+            <div class="wrap">
+                <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+            </div>
+
+            <div id="map" class="map">
+
+
+            </div>
+
+            <div id="infowindow-content">
+                <img src="" width="14" height="14" id="place-icon">
+                <span id="place-name" class="title"></span>
+                <br>
+                <span id="place-address"></span>
             </div>
         </div>
-        <form>
-            <section class="input-area">
-                <div class="form-group">
-                    <label for="formGroupExampleInput">Find</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="restaurant name, burgers, cocktails..">
+        <div class="col-sm-1"></div>
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-sm-12">
+
+            <div id="food-form" class="food-form">
+                <form id="foodForm">
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="sel1">Find a Happy Hour!</label>
+                            <select class="form-control" id="starType">
+                                <option>Happy Hour</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                </form>
+
+                <div class="row">
+                    <button type="submit" class="btn btn-primary btn-md raised" id="rating-button">Go!</button>
                 </div>
-                <div class="form-group">
-                    <label for="formGroupExampleInput2">Near</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="zip, downtown...">
-                </div>
-                <br>
-                <button type="submit" class="btn btn-light">Find My Happy Hour!</button>
-            </section>
-        </form>
-    </main>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="index-footer">
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBv0RbQRPesMRDxxK2MTcoqDzKkFRCFkMI&libraries=places"></script>
+    
+    <script src="./js/script.js"></script>
 
 </body>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-    crossorigin="anonymous"></script>
 
 </html>
