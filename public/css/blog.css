@@ -17,8 +17,8 @@ h5{
 
 .media{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    /* align-items: center; */
     padding: 30px;
     border: 1px solid black;
     margin-top: 30px;
@@ -26,8 +26,12 @@ h5{
 }
 
 .media-body{
+    display: flex;
+    flex-direction: column;
     padding: 20px;
+    align-items: center;
 }
+
 
  .instagram-container{
     display: flex;
@@ -36,5 +40,34 @@ h5{
 } 
 
 #pixlee_container{
-    width: 90%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    border-bottom: black;
+}
+
+.bg-mycolor{
+    background-color: #4d0000
+}
+
+.btn-primary {
+    background-color: #ffcccc!important;
+}
+
+.navbar-brand{
+    font-size: 30px;
+}
+
+.btn-find{
+    background-color:  #ffcccc!important;
 }

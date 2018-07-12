@@ -6,12 +6,15 @@ const app = express();
 const port = process.env.PORT || 8000;
 // const users = require('./routes/users');
 
+// const users = require('./routes/users');
+
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
 const cookieParser = require('cookie-parser');
 
 let happyhours = require('./routes/happyhoursroutes');
+// let index = require('./routes/index');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -27,6 +30,7 @@ app.use(cookieParser());
 app.use(express.static(path.join('public'))); //gives us access to public folder
 
 app.use(happyhours); //allows us to use our routes
+// app.use(); 
 
 app.use(function(req, res) {
   res.sendStatus(404);

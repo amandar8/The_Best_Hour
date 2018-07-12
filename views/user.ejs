@@ -1,0 +1,49 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<title>User</title>
+
+</head>
+<body>
+<form action='/user' method='post'>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username"/>
+
+  <label for="username">Password:</label>
+  <input type="text" id="password" name="password"/>
+  <input type="submit" value="Add User"/>
+</form>
+
+<form action='/user/auth' method='post'>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username"/>
+
+  <label for="username">Password:</label>
+  <input type="text" id="password" name="password"/>
+  <input type="submit" value="Check User Password"/>
+</form>
+
+
+<% if(data && data.length > 0){ %>
+  <table>
+    <tr>
+      <th>Username</th>
+      <th>Password</th>
+      <th>Delete</th>
+    </tr>
+  <% data.forEach(function(d){ %>
+    <tr>
+      <td><%= d.username %></td>
+      <td><%= d.password %></td>
+      <td>
+        <form action='/user/delete/<%= d.id %>' method='POST'>
+          <input type='submit' value='Delete User' />
+        </form>
+      </td>
+    </tr>
+  <% }); %>
+</table>
+<% } %>
+
+</body>
+</html> -->

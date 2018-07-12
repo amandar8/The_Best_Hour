@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-mycolor">
         <a class="navbar-brand" href="index.html">The Best Hour</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -36,32 +36,48 @@
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button type="button" class="btn btn-info" type="submit">Find</button>
+                <button type="button" class="btn btn-find" type="submit">Find</button>
             </form>
         </div>
     </nav>
 
     <main>
-            <div class="row justify-content-center margin-top-50">
-                    <div class="col-10 border-bottom">
-                        <section class="title-container">
-                      <h1>Why Limit Happy To An Hour?</h1>
-                    </section>
+        <div class="row justify-content-center margin-top-50">
+            <div class="col-10 border-bottom">
+                <section class="title-container">
+                    <h1>Why Limit Happy To An Hour?</h1>
+                </section>
+            </div>
+        </div>
+
+        <div class="instagram-container">
+            <div class="media">
+                <img class="mr-3" src="./imgs/me.jpg" width="300" height="400" alt="Generic placeholder image">
+                <div class="media-body">
+                    <div class="title-area">
+                        <h5 class="mt-0">So Much Food, So Little Time</h5>
                     </div>
-                  </div>
+                    <div class="info-area">
+                        <p class='me-info'></p>Below, you can follow all my food adventures around Austin, TX!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <div class="instagram-container">
-                    <div class="media">
-                            <img class="mr-3" src="./imgs/me.jpg" width="500" height="600" alt="Generic placeholder image">
-                            <div class="media-body">
-                                <h5 class="mt-0">So Much Food, So Little Time</h5>
-                                Below, you can follow all my food adventures around Austin, TX! 
-                            </div>
-                            </div>
+        <div id="pixlee_container"></div>
+        <script type="text/javascript">
+            window.PixleeAsyncInit = function () {
+                Pixlee.init({
+                    apiKey: '6FRMpcKiXmtst10kwC3B'
+                });
+                Pixlee.addSimpleWidget({
+                    widgetId: '6304'
+                });
+            };
+        </script>
+        <script src="//instafeed.assets.pixlee.com/assets/pixlee_widget_1_0_0.js"></script>
 
-            <div id="pixlee_container"></div><script type="text/javascript">window.PixleeAsyncInit = function() {Pixlee.init({apiKey:'6FRMpcKiXmtst10kwC3B'});Pixlee.addSimpleWidget({widgetId:'6304'});};</script><script src="//instafeed.assets.pixlee.com/assets/pixlee_widget_1_0_0.js"></script>
-        
-        </main>
+    </main>
 
 </body>
 
@@ -72,5 +88,5 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
 
-    
+
 </html>

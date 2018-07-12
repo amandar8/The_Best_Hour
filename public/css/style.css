@@ -1,4 +1,4 @@
-html,
+/* html,
 body,
 div,
 span,
@@ -89,7 +89,7 @@ video {
 
 /* HTML5 display-role reset for older browsers */
 
-article,
+/* article,
 aside,
 details,
 figcaption,
@@ -98,8 +98,8 @@ footer,
 header,
 hgroup,
 menu,
-nav,
-section {
+nav, */
+/* section {
     display: block;
 }
 
@@ -115,65 +115,79 @@ ul {
 blockquote,
 q {
     quotes: none;
-}
+} */
 
-blockquote:before,
+/* blockquote:before,
 blockquote:after,
 q:before,
 q:after {
     content: '';
     content: none;
-}
+} */
 
-table {
+/* table {
     border-collapse: collapse;
     border-spacing: 0;
-}
+} */
 
-.elementToFadeInAndOut {
+/* .elementToFadeInAndOut {
     display: flex;
-    background-image: url("../imgs/Open_logo.png");
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: black;
+    background-image: url("../imgs/logo.png");
     width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-position: center;
     -webkit-animation: fadeinout 3s linear forwards;
     animation: fadeinout 4s linear forwards;
     justify-content: center;
     align-items: center;
+    pointer-events: none;
+}  */
+
+h1{
+    font-size: 100px;
 }
 
-nav {
-    -webkit-animation: fadein 3s linear forwards;
-    animation: fadein 4s linear forwards;
+h2{
+    font-size: 30px;
 }
 
-@-webkit-keyframes fadein {
-    0%,
-    50% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
+.title-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
 }
 
-@keyframes fadein {
-    0%,
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+.title{
+    display: flex;
+    justify-content: center;
+    font-size: 100px;
+    color: white;
+    font-family: 'Fredericka the Great', cursive;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.welcome{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    margin-top: 40px;
+    font-family: 'Alike', serif;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 @-webkit-keyframes fadeinout {
     100% {
         opacity: 0;
     }
-    0%,
-    50% {
+   0%,  50% {
         opacity: 1;
     }
 }
@@ -182,26 +196,38 @@ nav {
     100% {
         opacity: 0;
     }
-    0%,
-    50% {
+    0%, 50% {
         opacity: 1;
     }
 }
 
-.btn-primary:active {
-    background-color: #8064A2
+a {
+    text-decoration: none;
+    color: black;
 }
 
-.btn-primary:hover {
-    background-color: aqua
+a:hover {
+    text-decoration: none;
+    border-bottom: black;
 }
 
+.bg-mycolor{
+    background-color: #4d0000
+}
+
+.btn-primary {
+    background-color: #ffcccc!important;
+}
+
+.navbar-brand{
+    font-size: 30px;
+}
 body {
     background-image: url("../imgs/background_photo.jpg");
     background-repeat: repeat;
     height: 100%;
     width: 100%;
-    color: white;
+    /* color: white; */
     font-family: 'Jaldi', sans-serif;
 }
 
@@ -211,3 +237,24 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.form-elegant .font-small {
+    font-size: 0.8rem; }
+
+.form-elegant .z-depth-1a {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25);
+    box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25); }
+
+.form-elegant .z-depth-1-half,
+.form-elegant .btn:hover {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
+    box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }
+
+.form-elegant .modal-header {
+    border-bottom: none; }
+
+.modal-dialog .form-elegant .btn .fa {
+    color: #2196f3!important; }
+
+.form-elegant .modal-body, .form-elegant .modal-footer {
+    font-weight: 400; }

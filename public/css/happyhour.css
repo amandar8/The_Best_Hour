@@ -3,9 +3,30 @@ body{
     background-repeat: repeat;
     height: 100%;
     width: 100%;
-    color: white;
+    /* color: white; */
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  border-bottom: black;
+}
+
+.bg-mycolor{
+  background-color: #4d0000
+}
+
+.btn-primary {
+  background-color: #ffcccc!important;
+}
+
+.navbar-brand{
+  font-size: 30px;
+}
 
 .btn-primary.raised {
     box-shadow: 0 3px 0 0 #007299;
@@ -13,7 +34,6 @@ body{
     margin: 1%;
   }
   
-
   .wrap {
 margin-bottom: 20px;
   }
@@ -38,6 +58,7 @@ margin-bottom: 20px;
     padding: 0 11px 0 13px;
     text-overflow: ellipsis;
     width: 400px;
+    color: black;
   }
   
   .pac-card {
@@ -49,6 +70,7 @@ margin-bottom: 20px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     background-color: #fff;
     font-family: Roboto;
+    color: black;
   }
   
   .food-form {
@@ -57,6 +79,7 @@ margin-bottom: 20px;
     margin-right: 20%;
     color: white;
     text-shadow: 1px 1px 1px black;
+    color: black;
   }
   
   @media (max-width: 440px) {
@@ -68,3 +91,6 @@ margin-bottom: 20px;
     }
   }
   
+  .btn-find{
+    background-color:  #ffcccc!important;
+}

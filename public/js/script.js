@@ -301,7 +301,7 @@
     }
   }
 
-  /////////////////////////////////////////////////////
+  //adding a marker after searching
 
   function addMarker(place) {
     let marker = new google.maps.Marker({
