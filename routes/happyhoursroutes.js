@@ -10,7 +10,7 @@ router.get('/happyhours', (req, res, next) => {
         .orderBy('id')
         .then((happyhours) => {
             // res.render('happyhours', {data:happyhours});
-            res.render('happyhours');
+            res.send(happyhours);
         })
         .catch((err) => {
             next(err);

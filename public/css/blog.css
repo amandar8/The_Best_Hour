@@ -23,6 +23,9 @@ h5{
     border: 1px solid black;
     margin-top: 30px;
     margin-bottom: 30px;
+    margin-left: 150px;
+    margin-right: 150px;
+  
 }
 
 .media-body{
@@ -30,6 +33,7 @@ h5{
     flex-direction: column;
     padding: 20px;
     align-items: center;
+    font-family: 'Alike', serif;
 }
 
 
@@ -70,4 +74,9 @@ a:hover {
 
 .btn-find{
     background-color:  #ffcccc!important;
+}
+
+.media-body{
+
+    
 }
