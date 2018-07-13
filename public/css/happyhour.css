@@ -22,6 +22,7 @@ a:hover {
 
 .btn-primary {
   background-color: #ffcccc!important;
+  border-color: black;
 }
 
 .navbar-brand{
@@ -29,7 +30,7 @@ a:hover {
 }
 
 .btn-primary.raised {
-    box-shadow: 0 3px 0 0 #007299;
+    box-shadow: 0 3px 0 0 black;
     font-family: 'Merienda';
     margin: 1%;
   }
@@ -93,4 +94,8 @@ margin-bottom: 20px;
   
   .btn-find{
     background-color:  #ffcccc!important;
+}
+
+label{
+  color: white;
 }
