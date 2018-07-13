@@ -38,3 +38,19 @@ User account creation, searchable happy hours by location
 ![Blog and Happy Hour mockups](https://github.com/amandar8/the_best_hour/blob/master/public/imgs/mockup2.jpg)
 
 ![About me mockup](https://github.com/amandar8/the_best_hour/blob/master/public/imgs/mockup3.jpg)
+
+#Final
+
+![On Load](https://github.com/amandar8/the_best_hour/blob/master/public/imgs/open_logo.png)
+
+![Fade Out](https://github.com/amandar8/the_best_hour/blob/master/public/imgs/Fadeout.png)
+
+![Home page](https://github.com/amandar8/the_best_hour/blob/master/public/imgs/Home-page.png)
+
+![Blog](https://github.com/amandar8/the_best_hour/blob/master/public/imgs/Blog.png)
+
+![Map](https://github.com/amandar8/the_best_hour/blob/master/public/imgs/map.png)
+
+![Map search](https://github.com/amandar8/the_best_hour/blob/master/public/imgs/map-search.png)
+
+![About Me](https://github.com/amandar8/the_best_hour/blob/master/public/imgs/about-me.png)
